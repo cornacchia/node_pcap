@@ -128,7 +128,7 @@ TCPOptions.prototype.decode = function (raw_packet, offset, len) {
                 offset += 8;
                 break;
             default:
-                console.log("Invalid TCP SACK option length " + raw_packet[offset + 1]);
+                // console.log("Invalid TCP SACK option length " + raw_packet[offset + 1]);
                 offset = end_offset;
             }
             break;
@@ -195,7 +195,7 @@ function TCP(emitter) {
 
 // If you get stuck trying to decode or understand the offset math, stick this block in to dump the contents:
 // for (var i = orig_offset; i < orig_offset + len ; i++) {
-//     console.log((i - orig_offset) + " / " + i + ": " + raw_packet[i] + " " + String.fromCharCode(raw_packet[i]));
+//     // console.log((i - orig_offset) + " / " + i + ": " + raw_packet[i] + " " + String.fromCharCode(raw_packet[i]));
 // }
 TCP.prototype.decoderName = "tcp";
 TCP.prototype.eventsOnDecode = true;

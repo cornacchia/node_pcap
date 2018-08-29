@@ -216,7 +216,7 @@ TCPSession.prototype.ESTAB = function (packet) {
             this.state = "CLOSE_WAIT";
         }
     } else {
-        console.log("non-matching packet in session: " + packet);
+        // console.log("non-matching packet in session: " + packet);
     }
 };
 
